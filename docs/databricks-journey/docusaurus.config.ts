@@ -6,8 +6,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Databricks Journey',
-  tagline: ' Security Analysis Tool (SAT) analyzes customer\'s Databricks account and workspace security configurations',
-  favicon: 'img/logo.svg',
+  tagline: 'Accelerate your Databricks setup and first MVP',
+  favicon: 'img/journey.svg',
 
   url: 'https://github.com',
   // Set the /<baseUrl>/ pathname under which your site is served
@@ -79,7 +79,7 @@ const config: Config = {
       title: 'Databricks Journey',
       logo: {
         alt: 'SAT Logo',
-        src: 'img/logo.svg',
+        src: 'img/databricks.ico',
       },
       items: [
         {

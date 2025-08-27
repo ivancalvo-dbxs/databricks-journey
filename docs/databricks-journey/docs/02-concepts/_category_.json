@@ -1,0 +1,9 @@
+{
+  "label": "Main Concepts",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Before starting the Databricks Setup, it is important to understand the following concepts:",
+    "slug": "/concepts"
+  }
+}
