@@ -3,7 +3,7 @@ sidebar_position: 4
 ---
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Create the first Databricks Workspace
+# Create the first Workspace
 
 :::info Goal
 Create the **dev workspace**
@@ -17,11 +17,11 @@ Repeat the process for the **staging** and **production workspaces**.
 
 ### Save time and clicks with Terraform
 
-To easily accomplish this task, use Terraform. Databricks offers multiple Terraform examples and modules in a public repository.
+To easily accomplish this task, use Terraform. Databricks offers multiple Terraform examples and modules in the following public repository:
 
-From the repo: [Terraform Databricks Examples](https://github.com/databricks/terraform-databricks-examples/tree/main/examples)
+[Terraform Databricks Modules and Examples](https://github.com/databricks/terraform-databricks-examples/tree/main/examples)
 
-These are the recommended modules to start:
+These are the recommended modules for the initial deployment:
     * For AWS, examples/aws-workspace-uc-simple
     * For Azure, examples/adb-vnet-injection
     * For GCP, examples/gcp-byovpc
@@ -42,7 +42,7 @@ These are the recommended modules to start:
 ### Manual approach through the UI 
 
 :::danger Not recommended
-This approach can lead to missing configurations and is highly prone to errors if you miss one step.
+This approach is not recommended, highly prone to error and misconfigurations.
 :::
 
 Follow one of the following guides:
