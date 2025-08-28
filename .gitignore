@@ -1,1 +1,4 @@
 .DS_Store
+node_modules
+docs/databricks-journey/build
+docs/.docusaurus

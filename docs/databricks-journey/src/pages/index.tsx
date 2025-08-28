@@ -11,11 +11,11 @@ const Hero = () => {
         <div className="flex flex-row items-center justify-center w-full max-w-3xl relative z-10">
           {/* Logo Left */}
           <div className="flex-shrink-0 mr-6">
-            <img src="img/journey.svg" alt="SAT Logo" className="w-40 md:w-48" />
+            <img src="img/journey.svg" alt="Databricks Journey" className="w-40 md:w-48" />
           </div>
           {/* Title Right */}
           <h1 className="text-4xl md:text-5xl font-bold text-left mb-0">
-            <span>The Databricks Journey</span>
+            <span>Databricks Starter Journey</span>
           </h1>
         </div>
       </div>

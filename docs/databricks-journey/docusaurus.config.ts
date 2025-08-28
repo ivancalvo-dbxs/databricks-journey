@@ -48,7 +48,7 @@ const config: Config = {
       }
     },
     'docusaurus-plugin-image-zoom',
-    'docusaurus-lunr-search'
+    //'docusaurus-lunr-search'
   ],
 
   presets: [
@@ -78,7 +78,7 @@ const config: Config = {
     navbar: {
       title: 'Databricks Journey',
       logo: {
-        alt: 'SAT Logo',
+        alt: 'Databricks Logo',
         src: 'img/databricks.ico',
       },
       items: [
@@ -87,7 +87,7 @@ const config: Config = {
           position: 'right',
         },
         {
-          href: 'https://github.com/databricks-industry-solutions/security-analysis-tool',
+          href: 'https://github.com/ivancalvo-dbxs/databricks-journey',
           position: 'right',
 
           className: 'header-github-link',
