@@ -1,12 +1,15 @@
 ---
-sidebar_position: 4
+sidebar_position: 1
 ---
+
+# Azure
+
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 # Create the first Workspace
 
 :::info Goal
-Create the **dev workspace**
+Deploy the **dev workspace** using Terraform
 :::
 
 :::info Next goal
