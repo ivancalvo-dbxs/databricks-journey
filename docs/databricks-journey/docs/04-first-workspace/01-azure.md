@@ -9,7 +9,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 # Create the first Workspace
 
 :::info Goal
-* Deploy the **dev workspace** using Terraform.
+* Deploy the **dev** workspace using Terraform.
 * Deploy on the **dev** Azure subscription.
 :::
 

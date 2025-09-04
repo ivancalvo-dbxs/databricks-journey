@@ -27,7 +27,7 @@ If you don't have a Databricks account yet, follow this video to create a new on
 # 2. Create the first Workspace
 
 :::info Goal
-* Deploy the **dev workspace** using Terraform.
+* Deploy the **dev** workspace using Terraform.
 * Deploy on the **dev** AWS account.
 :::
 
