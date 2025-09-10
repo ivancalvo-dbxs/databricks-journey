@@ -1,9 +1,9 @@
 {
-  "label": "Create the first Workspace",
+  "label": "Create the Workspace(s)",
   "position": 4,
   "link": {
     "type": "generated-index",
     "description": "Let's deploy the first Workspace",
-    "slug": "/first-workspace"
+    "slug": "/create-workspaces"
   }
 }

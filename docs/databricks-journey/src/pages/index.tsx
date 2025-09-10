@@ -38,7 +38,7 @@ const Hero = () => {
           outline={true}
           link="/docs/motivation"
           size="large"
-          label={"Motivation"}
+          label={"1. Motivation"}
           className="w-full md:w-auto"
         />
         <Button
@@ -46,7 +46,23 @@ const Hero = () => {
           outline={true}
           link="/docs/concepts"
           size="large"
-          label={"Main Concepts"}
+          label={"2. Main Concepts"}
+          className="w-full md:w-auto"
+        />
+        <Button
+          variant="secondary"
+          outline={true}
+          link="/docs/before-you-start"
+          size="large"
+          label={"3. Before you start"}
+          className="w-full md:w-auto"
+        />
+        <Button
+          variant="secondary"
+          outline={true}
+          link="/docs/create-workspaces"
+          size="large"
+          label={"4. Create the Workspace(s)"}
           className="w-full md:w-auto"
         />
       </div>
