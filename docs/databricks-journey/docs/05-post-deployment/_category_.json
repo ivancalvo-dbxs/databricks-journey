@@ -1,0 +1,10 @@
+{
+  "label": "Post-deployment",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Follow the post-deployment configuration at the Account and Workspace level",
+    "slug": "/post-deployment",
+    "title": "Post-deployment Configurations"
+  }
+}

@@ -65,6 +65,14 @@ const Hero = () => {
           label={"4. Create the Workspace(s)"}
           className="w-full md:w-auto"
         />
+        <Button
+          variant="secondary"
+          outline={true}
+          link="/docs/post-deployment/"
+          size="large"
+          label={"5. Post-deployment setup"}
+          className="w-full md:w-auto"
+        />
       </div>
     </div>
   );

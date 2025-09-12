@@ -1,0 +1,71 @@
+---
+sidebar_position: 1
+---
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+# Account Console
+## Disable Legacy features
+
+* Go to the Account Console
+    - [AWS](https://accounts.cloud.databricks.com)
+    - [Azure](https://accounts.azuredatabricks.net)
+* On the left panel, click on **Settings**.
+* Click on the **Feature enablement** tab.
+* Disable Legacy Features.
+    * Click on the drop-down and disable it.
+
+<div className='bg-gray-100 p-4 rounded-lg mb-6'>
+  <img src={useBaseUrl('/img/account-disable-features.png')} alt="Single-tenant Deployment"/>
+</div>
+
+## Metastore Owner
+
+* Go to the Account Console
+    - [AWS](https://accounts.cloud.databricks.com)
+    - [Azure](https://accounts.azuredatabricks.net)
+* On the left panel, click on **Catalog**.
+* Click on the available metastore.
+* **Verify that the metastore owner is a group**, not a user or the Terraform SP.
+    * If it's owned by a User or Terraform SP:
+        * Create a new group called **unity-admins** or **metastore-admins**.
+            * Check the next section for more guidance on groups.
+        * Change the ownership, assign the group.
+* Select the metastore auto-assigment on new Workspaces.
+
+<div className='bg-gray-100 p-4 rounded-lg mb-6'>
+  <img src={useBaseUrl('/img/account-metastore-owner.png')} alt="Single-tenant Deployment"/>
+</div>
+
+## Add new users to the Account
+
+### SCIM approach (best practice)
+
+Configure SCIM user provisioning to sync your users from your identify provider into Databricks.
+
+* [Sync users and groups from your identity provider using SCIM
+](https://docs.databricks.com/aws/en/admin/users-groups/scim/)
+    * Select the cloud-provider at the top-right.
+    * [Configure SCIM provisioning using Microsoft Entra ID (Azure Active Directory)
+](https://docs.databricks.com/aws/en/admin/users-groups/scim/aad)
+    * [Configure SCIM provisioning for Okta
+](https://docs.databricks.com/aws/en/admin/users-groups/scim/okta)
+    * [Configure SCIM provisioning for OneLogin
+](https://docs.databricks.com/aws/en/admin/users-groups/scim/onelogin)
+    * [Enable all identity provider users to access Databricks
+](https://docs.databricks.com/aws/en/admin/users-groups/scim/enable-all-users)
+
+### UI approach
+Add your coworkers and peers into Databricks.
+
+* Go to the Account Console
+    - [AWS](https://accounts.cloud.databricks.com)
+    - [Azure](https://accounts.azuredatabricks.net)
+
+* On the left panel, click on **User management**.
+* On the **Users** tab, click on **Add user**.
+* Type the **email** and **user full name**.
+
+## Add new groups to the Account
+
+[Under construction]

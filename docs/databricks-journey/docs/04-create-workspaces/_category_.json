@@ -4,6 +4,7 @@
   "link": {
     "type": "generated-index",
     "description": "Let's deploy the first Workspace",
-    "slug": "/create-workspaces"
+    "slug": "/create-workspaces",
+    "title": "Create the Workspace(s)"
   }
 }
