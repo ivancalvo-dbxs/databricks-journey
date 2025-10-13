@@ -1,4 +1,20 @@
-.DS_Store
-node_modules
+# Dependencies
+docs/databricks-journey/node_modules
+
+# Production
 docs/databricks-journey/build
-docs/.docusaurus
+
+# Generated files
+docs/databricks-journey/.docusaurus
+docs/databricks-journey/.cache-loader
+
+# Misc
+docs/databricks-journey/.DS_Store
+docs/databricks-journey/.env.local
+docs/databricks-journey/.env.development.local
+docs/databricks-journey/.env.test.local
+docs/databricks-journey/.env.production.local
+
+docs/databricks-journey/npm-debug.log*
+docs/databricks-journey/yarn-debug.log*
+docs/databricks-journey/yarn-error.log*

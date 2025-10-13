@@ -41,14 +41,16 @@ const Hero = () => {
           label={"1. Motivation"}
           className="w-full md:w-auto"
         />
+        
         <Button
           variant="secondary"
           outline={true}
-          link="/docs/concepts"
+          link="/docs/foundations"
           size="large"
-          label={"2. Main Concepts"}
+          label={"2. Foundations"}
           className="w-full md:w-auto"
         />
+        
         <Button
           variant="secondary"
           outline={true}
@@ -57,6 +59,7 @@ const Hero = () => {
           label={"3. Before you start"}
           className="w-full md:w-auto"
         />
+        
         <Button
           variant="secondary"
           outline={true}
@@ -65,14 +68,16 @@ const Hero = () => {
           label={"4. Create the Workspace(s)"}
           className="w-full md:w-auto"
         />
+        
         <Button
           variant="secondary"
           outline={true}
           link="/docs/post-deployment/"
           size="large"
-          label={"5. Post-deployment setup"}
+          label={"5. Post-deployment Setup"}
           className="w-full md:w-auto"
         />
+        
       </div>
     </div>
   );
