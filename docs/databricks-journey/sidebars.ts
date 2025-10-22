@@ -70,6 +70,28 @@ const sidebars = {
         'post-deployment/account'
       ],
     },
+
+    // https://repo_url.com/databricks-journey/docs/access-the-data/
+    {
+      type: 'category',
+
+      label: 'Access the Data',
+      link: { type: 'doc', id: 'access-the-data/index' },
+      collapsible: true,
+      collapsed: false,
+      items: [
+        {
+          type: 'category',
+          label: 'Access through UC',
+          link: { type: 'doc', id: 'access-the-data/uc-objects/index' },
+          items: [
+            'access-the-data/uc-objects/azure',
+            'access-the-data/uc-objects/aws'
+          ],
+        }
+      ],
+    }
+
   ],
 };
 

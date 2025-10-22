@@ -77,6 +77,15 @@ const Hero = () => {
           label={"5. Post-deployment Setup"}
           className="w-full md:w-auto"
         />
+
+        <Button
+          variant="secondary"
+          outline={true}
+          link="/docs/access-the-data/"
+          size="large"
+          label={"6. Access the data"}
+          className="w-full md:w-auto"
+        />
         
       </div>
     </div>
