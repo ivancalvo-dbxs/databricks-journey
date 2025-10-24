@@ -5,8 +5,109 @@ sidebar_position: 1
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import Admonition from '@theme/Admonition';
 
-# Azure 
+# Creating Storage Credentials and External Locations in Azure + designing your catalog architecture
 
-## Storage credentials 
+## How to create a Storage Credential in Azure
+
+1. Go to the Azure portal [https://portal.azure.com/](https://portal.azure.com/)
+2. In the search bar, type "Access Connector for Azure Databricks"
+
+3. Click on "Access Connector for Azure Databricks"
+<br />
+
+<div style={{textAlign: 'left'}}>
+  <img src={useBaseUrl('/img/azure/azure_access_connector_searchbar.png')} 
+  alt="Azure Access Connector Searchbar"
+  style={{width: '50%', height: 'auto'}}
+  
+  />
+</div>
+
+<br />
+
+4. Click on "Create"
+
+<br />
+
+
+<div style={{textAlign: 'left'}}>
+  <img src={useBaseUrl('/img/azure/create_access_connector_buttom.png')} 
+  alt="Create Access Connector Button"
+  style={{width: '50%', height: 'auto'}}
+  
+  />
+</div>
+<br />
+
+5. Choose the subscription, resource group and name for the access connector then click on "Review + create". 
+- Subscription: The subscription where the access connector will be created.
+- Resource group: The resource group where the access connector will be created.
+- Name: The name of the access connector.
+<br />
+
+<div style={{textAlign: 'left'}}>
+  <img src={useBaseUrl('/img/azure/access_connector_name.png')} 
+  alt="Create Access Connector Button"
+  style={{width: '50%', height: 'auto'}}
+  />
+</div>
+
+<br />
+6. Click on "create" to create the access connector.
+
+<div style={{textAlign: 'left'}}>
+  <img src={useBaseUrl('/img/azure/access_connector_create_buttom.png')} 
+  alt="Create Access Connector Button"
+  style={{width: '50%', height: 'auto'}}
+  />
+</div>
+<br />
+7. Go to the resource and copy the resource ID.
+<br />
+
+<div style={{textAlign: 'left'}}>
+  <img src={useBaseUrl('/img/azure/copy_ac_resource_id.png')} 
+  alt="Create Access Connector Button"
+  style={{width: '50%', height: 'auto'}}
+   />
+</div>
+<br />
+
+
+7. Go to the Databricks workspace and click on catalog
+<br />
+
+<div style={{textAlign: 'left'}}>
+  <img src={useBaseUrl('/img/azure/ws_catalog_buttom.png')} 
+  alt="Create Access Connector Button"
+  style={{width: '25%', height: '25%'}}
+   />
+</div>
+<br />
+
+7. Click on "External Data"
+<br />
+
+<div style={{textAlign: 'left'}}>
+  <img src={useBaseUrl('/img/azure/external_location_buttom.png')} 
+  alt="Create Access Connector Button"
+  style={{width: '100%', height: 'auto%'}}
+   />
+</div>
+<br />
+
+7. Click on "Credentials" and "create credential".
+<br />
+
+<div style={{textAlign: 'left'}}>
+  <img src={useBaseUrl('/img/azure/create_credential_buttom.png')} 
+  alt="Create Access Connector Button"
+  style={{width: '100%', height: 'auto'}}
+   />
+</div>
+<br />
+
+
+
 
 ## External Locations
