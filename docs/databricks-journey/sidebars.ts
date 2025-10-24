@@ -82,13 +82,23 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'Access through UC',
-          link: { type: 'doc', id: 'access-the-data/uc-objects/index' },
+          label: 'Data in cloud object storage',
+          link: { type: 'doc', id: 'access-the-data/data-in-cloud-object-storage/index' },
           items: [
-            'access-the-data/uc-objects/azure',
-            'access-the-data/uc-objects/aws'
+            'access-the-data/data-in-cloud-object-storage/azure/azure',
+            'access-the-data/data-in-cloud-object-storage/aws/aws'
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Data in external systems',
+          link: { type: 'doc', id: 'access-the-data/data-in-external-systems/index' },
+          items: [
+            'access-the-data/data-in-external-systems/azure/azure',
+            'access-the-data/data-in-external-systems/aws/aws'
           ],
         }
+
       ],
     }
 
