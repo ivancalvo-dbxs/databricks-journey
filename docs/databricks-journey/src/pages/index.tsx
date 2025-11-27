@@ -65,7 +65,7 @@ const Hero = () => {
           outline={true}
           link="/docs/create-workspaces"
           size="large"
-          label={"4. Create the Workspace(s)"}
+          label={"4. Create workspaces"}
           className="w-full md:w-auto"
         />
         
@@ -77,16 +77,26 @@ const Hero = () => {
           label={"5. Post-deployment Setup"}
           className="w-full md:w-auto"
         />
+      </div>
 
+      <div className="mt-6 flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4">
+        <Button
+          variant="secondary"
+          outline={true}
+          link="/docs/post-deployment/"
+          size="large"
+          label={"6. Governance strategy on Unity Catalog"}
+          className="w-full md:w-auto"
+        />
+        
         <Button
           variant="secondary"
           outline={true}
           link="/docs/access-your-data-from-uc/"
           size="large"
-          label={"6. Access your data from UC"}
+          label={"7. Access your data from UC"}
           className="w-full md:w-auto"
         />
-        
       </div>
     </div>
   );

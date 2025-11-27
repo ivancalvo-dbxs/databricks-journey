@@ -27,7 +27,7 @@ const sidebars = {
     // https://repo_url.com/databricks-journey/docs/foundations/
     {
       type: 'category',
-      label: 'Foundations',
+      label: '2. Foundations',
       link: { type: 'doc', id: 'foundations/index' },
       collapsible: true,
       collapsed: false,
@@ -46,7 +46,7 @@ const sidebars = {
     // https://repo_url.com/databricks-journey/docs/create-workspaces/
     {
       type: 'category',
-      label: 'Create Workspaces',
+      label: '4. Create workspaces',
       link: { type: 'doc', id: 'create-workspaces/index' },
       collapsible: true,
       collapsed: false,
@@ -60,7 +60,7 @@ const sidebars = {
     // https://repo_url.com/databricks-journey/docs/post-deployment/
     {
       type: 'category',
-      label: 'Post-deployment Setup',
+      label: '5. Post-deployment Setup',
       link: { type: 'doc', id: 'post-deployment/index' },
       collapsible: true,
       collapsed: false,
@@ -74,7 +74,7 @@ const sidebars = {
     // https://repo_url.com/databricks-journey/docs/access-your-data-from-uc/
     {
       type: 'category',
-      label: 'Access your data from UC',
+      label: '7. Access your data from Unity Catalog',
       link: { type: 'doc', id: 'access-your-data-from-uc/index' },
       collapsible: true,
       collapsed: false,

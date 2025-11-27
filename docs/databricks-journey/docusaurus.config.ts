@@ -47,7 +47,7 @@ const config: Config = {
         },
       }
     },
-    'docusaurus-plugin-image-zoom',
+    //'docusaurus-plugin-image-zoom',
     //'docusaurus-lunr-search'
   ],
 
@@ -69,10 +69,10 @@ const config: Config = {
     ],
   ],
 
-
   themeConfig: {
     colorMode: {
       defaultMode: 'light',
+      disableSwitch: true,
       respectPrefersColorScheme: false,
     },
     navbar: {
@@ -83,16 +83,12 @@ const config: Config = {
       },
       items: [
         {
-          type: 'search',
-          position: 'right',
-        },
-        {
           href: 'https://github.com/ivancalvo-dbxs/databricks-journey',
           position: 'right',
 
           className: 'header-github-link',
           'aria-label': 'GitHub repository',
-        },
+        }
 
       ],
     },
