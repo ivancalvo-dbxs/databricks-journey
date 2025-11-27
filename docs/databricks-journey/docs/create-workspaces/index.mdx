@@ -5,14 +5,123 @@ import Admonition from '@theme/Admonition';
 
 # Create Workspaces
 
-:::warning UNDER CONSTRUCTION
-UNDER CONSTRUCTION
+An extended explanation can be found in: **[Functional Workspace Organization on Databricks
+](https://www.databricks.com/blog/2022/03/10/functional-workspace-organization-on-databricks.html)**
+
+## Three workspaces: Best practice and industry standard.
+
+:::tip Recommended number of workspaces
+
+- **Three workspaces.**
+- **Aligned with the SDLC (dev, staging, production).**
+    - Staging is often named as QA or testing depending on the organization context.
+    - ***Treat your data and AI as you treat your code.***
+
+### Short JSON visual representation.
+
+- This is just a visual representation.
+- This is NOT how workspaces, catalogs and permissions are defined.
+
+```
+{
+  dev_workspace: {
+    name: development,
+    catalogs: [sandbox, dev]
+    permissions: [
+        de_team: [CAN_MANAGE, CAN_CREATE, CAN_READ, CAN_DELETE],
+        devops_team: [ADMIN],
+        ml_team: [CAN_READ, CAN_CREATE_MODELS],
+        it_team: [CAN_READ],
+        finance_consumers: [READ_ONLY, DASHBOARDS_ONLY]
+    ]
+  },
+
+  staging_workspace: {
+    name: staging,
+    catalogs: [sandbox, staging]
+    permissions: [
+        automation_and_service_principals: [ADMIN, CAN_MANAGE, CAN_CREATE],
+        devops_team: [ADMIN]
+        de_team: [CAN_READ, DASHBOARDS_ONLY]
+    ]
+  },
+
+  production_workspace: {
+    name: production,
+    catalogs: [production]
+    permissions: [
+        automation_and_service_principals: [ADMIN, CAN_MANAGE, CAN_CREATE],
+        devops_team: [ADMIN],
+        de_team: [CAN_READ, DASHBOARDS_ONLY],
+        data_consumers: [CAN_READ, DASHBOARDS_ONLY]
+    ]
+  },
+```    
 :::
 
-## What is the best practice?
+![Workspace Deployment](/img/workspace-three.jpg)
 
-## What is the industry doing?
 
+## Multiple business units setup
+
+If three workspaces is not enought to separate your organization teams and business units do the following:
+
+:::warning Business unit and teams separation. 
+
+- Keep the three workspace idea.
+- Add the (business unit | line of business | team name) as a prefix to the workspace names.
+- For each (business unit | line of business | team name), create a dev - staging - prod workspace.
+
+### Short JSON visual representation.
+
+- This is just a visual representation.
+- This is NOT how workspaces, catalogs and permissions are defined.
+
+```
+{
+  // Finance follows the 3 workspace SDLC approach.  
+  finance: {
+    workspaces: [finance_dev, finance_staging, finance_prod],
+    catalogs: [finance_dev, finance_staging, finance_prod],
+    permissions: [
+        de_team: [ADMINS],
+        ml_team: [CAN_READ, CAN_CREATE_MODELS],
+        it_team: [CAN_READ]
+        finance_consumers: [READ_ONLY, DASHBOARDS_ONLY]
+    ]
+  },
+  
+  // HR solutions are simpler so only a non-prod and prod is required.
+  hr: {
+    workspaces: [hr_nonprod, hr_prod],
+    catalogs: [hr_nonprod, hr_prod],
+    permissions: [
+        de_team: [ADMINS],
+        hr_consumers: [READ_ONLY, DASHBOARDS_ONLY],
+    ]
+  }
+
+  data_science: ...,
+  it_solutions: ...,
+  analytics: ...
+
+```
+:::
+
+![Workspace Deployment](/img/workspace-lob.png)
+
+
+## Single workspace: Not recommended, hard to scale and manage.
+
+:::danger One place for all the jobs, pipelines, dashboards and AI models in a organization.
+- Dev, Staging and Prod workloads on a single workspace is highly prone to errors.
+- All users and automations service principals working and deploying on a single environment.
+- ***This is the GIT equivalent of working only on the main branch.***
+- ***Treat your data and AI as you treat your code.***
+:::
+
+
+# 
 
 ## Deploy the workspaces
 

@@ -27,7 +27,6 @@ const sidebars = {
     // https://repo_url.com/databricks-journey/docs/foundations/
     {
       type: 'category',
-
       label: 'Foundations',
       link: { type: 'doc', id: 'foundations/index' },
       collapsible: true,
@@ -47,7 +46,6 @@ const sidebars = {
     // https://repo_url.com/databricks-journey/docs/create-workspaces/
     {
       type: 'category',
-
       label: 'Create Workspaces',
       link: { type: 'doc', id: 'create-workspaces/index' },
       collapsible: true,
@@ -55,13 +53,13 @@ const sidebars = {
       items: [
         'create-workspaces/azure',
         'create-workspaces/aws',
+        'create-workspaces/gcp',
       ],
     },
 
     // https://repo_url.com/databricks-journey/docs/post-deployment/
     {
       type: 'category',
-
       label: 'Post-deployment Setup',
       link: { type: 'doc', id: 'post-deployment/index' },
       collapsible: true,
@@ -71,31 +69,32 @@ const sidebars = {
       ],
     },
 
-    // https://repo_url.com/databricks-journey/docs/access-the-data/
+    'uc-governance-strategy',
+
+    // https://repo_url.com/databricks-journey/docs/access-your-data-from-uc/
     {
       type: 'category',
-
-      label: 'Access the Data',
-      link: { type: 'doc', id: 'access-the-data/index' },
+      label: 'Access your data from UC',
+      link: { type: 'doc', id: 'access-your-data-from-uc/index' },
       collapsible: true,
       collapsed: false,
       items: [
         {
           type: 'category',
-          label: 'Data in cloud object storage',
-          link: { type: 'doc', id: 'access-the-data/data-in-cloud-object-storage/index' },
+          label: 'Cloud object storage',
+          link: { type: 'doc', id: 'access-your-data-from-uc/cloud-object-storage/index' },
           items: [
-            'access-the-data/data-in-cloud-object-storage/azure/azure',
-            'access-the-data/data-in-cloud-object-storage/aws/aws'
+            'access-your-data-from-uc/cloud-object-storage/azure/azure',
+            'access-your-data-from-uc/cloud-object-storage/aws/aws'
           ],
         },
         {
           type: 'category',
-          label: 'Data in external systems',
-          link: { type: 'doc', id: 'access-the-data/data-in-external-systems/index' },
+          label: 'External systems and databases',
+          link: { type: 'doc', id: 'access-your-data-from-uc/external-systems/index' },
           items: [
-            'access-the-data/data-in-external-systems/azure/azure',
-            'access-the-data/data-in-external-systems/aws/aws'
+            'access-your-data-from-uc/external-systems/azure/azure',
+            'access-your-data-from-uc/external-systems/aws/aws'
           ],
         }
 

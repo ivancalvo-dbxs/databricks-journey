@@ -81,9 +81,9 @@ const Hero = () => {
         <Button
           variant="secondary"
           outline={true}
-          link="/docs/access-the-data/"
+          link="/docs/access-your-data-from-uc/"
           size="large"
-          label={"6. Access the data"}
+          label={"6. Access your data from UC"}
           className="w-full md:w-auto"
         />
         
