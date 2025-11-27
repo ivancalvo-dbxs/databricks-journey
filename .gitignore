@@ -9,7 +9,7 @@ docs/databricks-journey/.docusaurus
 docs/databricks-journey/.cache-loader
 
 # Misc
-docs/databricks-journey/.DS_Store
+.DS_Store
 docs/databricks-journey/.env.local
 docs/databricks-journey/.env.development.local
 docs/databricks-journey/.env.test.local

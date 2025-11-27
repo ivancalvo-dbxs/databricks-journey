@@ -4,7 +4,7 @@ sidebar_position: 3
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import Admonition from '@theme/Admonition';
 
-# Before you start
+# 3. Before you start
 
 Before deploying the Cloud and Databricks assets, it is crucial to determine the specific location within your cloud tenant where these assets will be created.
 
@@ -13,27 +13,20 @@ Databricks supports multi-tenant deployments designed to ensure both physical an
 ## Identify your cloud tenant and sub-tenants
 
 :::note AWS
-- How many AWS accounts do you have access to? 
+- How many tenants do you have access to?
+    - Azure subscriptions.
+    - AWS accounts.
+    - GCP projects.
 - Do the accounts follow the SDLC dev-staging-prod isolation?
+    - If so, apply the same SDLC idea with the Databricks workspaces and cloud resources
 :::
 
-:::note Azure
-- How many Azure subscriptions do you have access to?
-- Do the subscriptions follow the SDLC dev-staging-prod isolation?
-:::
+## Single-tenant deployment
 
-:::note GCP
-- How many GCP projects do you have access to? 
-- Do the projects follow the SDLC dev-staging-prod isolation?
-:::
+<img src={useBaseUrl('/img/single-tenant.png')} alt="description" width="800"/>
 
-## Scenario #1: Single-tenant deployment
+### Hypothetical case for a single-tenant scenario
 
-<div className='bg-gray-100 p-4 rounded-lg mb-6'>
-  <img src={useBaseUrl('/img/single-tenant.png')} alt="Single-tenant Deployment"/>
-</div>
-
-### Example for scenario #1:
 - My organization uses AWS.
 - There is only one available AWS account.
 - There is no plan to create new AWS accounts in the long-term so every required AWS resource for Databricks needs to be deployed on the available account.
@@ -41,33 +34,21 @@ Databricks supports multi-tenant deployments designed to ensure both physical an
 ### Databricks setup recommendation.
 
 - On the available AWS account, create the three workspaces and the required AWS resources.
-<!---
-/* - Each Databricks Workspace requires the following AWS resources:
-    - In a VPC:
-        - 2x subnets.
-        - 1x security group.
-    - 1x S3 bucket.
-    - 2x IAM policies.
-        - Cross Account role: To allow Databricks to create and manage compute.
-        - UC access: To allow Databricks UC to manage S3 buckets.
--->
 
-## Scenario #2: Multiple-tenant deployment (best practice and recommendation)
+## Multi-tenant deployment (best practice and recommendation)
+
+<img src={useBaseUrl('/img/multi-tenant.png')} alt="description" width="800"/>
 
 
-<div className='bg-gray-100 p-4 rounded-lg mb-6'>
-  <img src={useBaseUrl('/img/multi-tenant.png')} alt="Multi-tenant Deployment"/>
-</div>
-
-### Example for scenario #2:
+### Hypothetical case for a multi-tenant scenario
 - My organization uses Azure.
 - There are 3 different Azure subscriptions: dev, staging and prod.
-- We want to isolate the Databricks assets and Azure resources as much as we can.
+- We want to isolate the Databricks and Azure resources as much as we can.
 - Each environment data needs to be isolated on it's own location.
 
-### Databricks setup recommendation.
+## Databricks setup recommendation.
 
-- For each Azure subscription, create a workspace and the required Azure resources.
+- For each Azure subscription, create a Databricks workspace and the required Azure resources.
 
 # Lessons learned
 

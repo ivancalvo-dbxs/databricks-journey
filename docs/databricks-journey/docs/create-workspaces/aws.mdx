@@ -6,7 +6,9 @@ sidebar_position: 2
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# 1. Create the Databricks Account
+Follow the **manual** ☑️ or **Terraform** ✅ approach to deploy the workspaces.
+
+## Create a Databricks Account
 
 If you don't have a Databricks account yet, follow this video to create a new one:
 
@@ -24,24 +26,37 @@ If you don't have a Databricks account yet, follow this video to create a new on
 <br />
 <br />
 
-# 2. Create the Workspaces
+## Manual deployment 
 
-:::warning Follow the Youtube video tutorial!
-* There is a Youtube video tutorial in the following sections that shows how to configure and run the Terraform projects.
+:::info Plan
+- Follow this video to deploy the first workspace, start with the **development workspace**.
+- Take in consideration the AWS account where it's supposed to be deployed.
+  - i.e dev workspace on the dev AWS account.
+- Repeat for **staging** and **production** workspaces. 
 :::
 
-## Development Workspaces
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/7n9WrkJhc7c"
+  title="YouTube video player"
+  frameBorder="0"
+  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
 
-:::info Development Workspace
+## Terraform deployment 🔥
+
+:::info Development workspace
 * Deploy the **dev** workspace using Terraform.
 * Deploy on the **dev** AWS account.
 * Use the following TF template: **[01-aws-workspace-metastore](https://github.com/ivancalvo-dbxs/terraform-databricks-workspaces-2025/tree/main/aws/01-aws-workspace-metastore)**
 :::
 
-## Staging and Production Workspaces
-
-:::danger Pre-requisite!
-* Run the Development Workspace Terraform template as a pre-requisite.
+:::danger Pre-requisite before deploy staging and production!
+* Deploy the development workspace first using the provided template in the previous note.
+* The development workspace template from the previous note creates the Unity Catalog metastore.
+* The template ***02-aws-workspace*** does not includes the metastore creation.
 :::
 
 :::success Staging and Production Workspaces
@@ -51,10 +66,8 @@ If you don't have a Databricks account yet, follow this video to create a new on
 * Use the following TF template: **[02-aws-workspace](https://github.com/ivancalvo-dbxs/terraform-databricks-workspaces-2025/tree/main/aws/02-aws-workspace)**
   * The project similar as the 01-aws-workspace-metastore template. The metastore and UC admin groups is skipped.
 :::
-<br />
-<br />
 
-# Save time and clicks with Terraform (🔥)
+### Save time and clicks with Terraform (🔥)
 
 
 Follow the Youtube tutorial to accomplish the deployments.
@@ -63,9 +76,6 @@ Github Repo and Terraform templates:
 * [Terraform Databricks Workspaces 2025 | 01-aws-workspace-metastore](https://github.com/ivancalvo-dbxs/terraform-databricks-workspaces-2025)
 * (1st workspace) For dev workspace: **[01-aws-workspace-metastore](https://github.com/ivancalvo-dbxs/terraform-databricks-workspaces-2025/tree/main/aws/01-aws-workspace-metastore)**
 * (2nd and 3rd workspaces) For staging and prod: **[02-aws-workspace](https://github.com/ivancalvo-dbxs/terraform-databricks-workspaces-2025/tree/main/aws/02-aws-workspace)**
-
-
-## Youtube tutorial
 
 <iframe
   width="560"
