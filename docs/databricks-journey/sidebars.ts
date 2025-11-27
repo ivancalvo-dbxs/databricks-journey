@@ -84,8 +84,8 @@ const sidebars = {
           label: 'Cloud object storage',
           link: { type: 'doc', id: 'access-your-data-from-uc/cloud-object-storage/index' },
           items: [
-            'access-your-data-from-uc/cloud-object-storage/azure/azure',
-            'access-your-data-from-uc/cloud-object-storage/aws/aws'
+            'access-your-data-from-uc/cloud-object-storage/azure',
+            'access-your-data-from-uc/cloud-object-storage/aws'
           ],
         },
         {
@@ -93,8 +93,8 @@ const sidebars = {
           label: 'External systems and databases',
           link: { type: 'doc', id: 'access-your-data-from-uc/external-systems/index' },
           items: [
-            'access-your-data-from-uc/external-systems/azure/azure',
-            'access-your-data-from-uc/external-systems/aws/aws'
+            'access-your-data-from-uc/external-systems/azure',
+            'access-your-data-from-uc/external-systems/aws'
           ],
         }
 
