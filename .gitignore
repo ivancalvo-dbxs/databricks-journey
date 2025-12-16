@@ -10,6 +10,10 @@ docs/databricks-journey/.cache-loader
 
 # Misc
 .DS_Store
+docs/.DS_Store
+docs/databricks-jouryney/static/.DS_Store
+docs/databricks-jouryney/static/img/.DS_Store
+
 docs/databricks-journey/.env.local
 docs/databricks-journey/.env.development.local
 docs/databricks-journey/.env.test.local
