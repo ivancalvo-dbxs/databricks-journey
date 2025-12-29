@@ -11,39 +11,22 @@ More information:
 - [Databricks Unity Catalog](https://www.databricks.com/product/unity-catalog)
 - [What is Unity Catalog?](https://docs.databricks.com/aws/en/data-governance/unity-catalog/)
 
-## Unified Governance
+## UC sits between your workspaces and data lake.
 
-![Unity Catalog Access](/img/uc-top-level.png)
+![Unity Catalog Access](/img/uc-top-level.jpg)
 
-## Where is UC positioned?
-
-Unity Catalog is positioned between your cloud data lake and the Databricks products compute (jobs, pipelines, warehouses, model serving endpoints, applications).
-
-![Unity Catalog Layer](/img/uc-layer.png)
-
-## UC three-level namespace convention
-
-![Unity Catalog Hierarchy](/img/uc-hierarchy.png)
-
-## Every data and ML interaction goes through UC
+## Every data, ML and GenAI interaction goes through UC
 
 * When an user or service principal:
   - Creates a table.
-  - Adds data a table.
+  - Populates a table.
   - Deletes a table.
   - Query a table.
-* Repeat for models, functions, views, schemas, volumes, etc...
+* (Same for models, functions, views, schemas, volumes, etc...)
   
-The grants and permission(s) verification is on Unity Catalog as shown in the following diagram:
+The grants and permission(s) verification happens on Unity Catalog as shown in the following diagram:
 
 ![Unity Catalog and Federation](/img/uc-and-federation.png)
-
-## How to ingest data on "Databricks" or UC?
-
-* Databricks storage and compute is decoupled. 
-* When you "ingest data" in UC, actually you're creating new data files (tables) in your cloud object storage.
-* The data is always stored on your cloud object storage as Delta format.
-* UC manages your data and models (which are stored on your cloud object storage).
 
 ## Lessons learned
 
@@ -52,15 +35,15 @@ Unity Catalog is a centralized metadata layer designed to manage data access, se
 :::
 
 :::info Where is the data stored?
-The data, metadata and AI models are always stored in your cloud-object storage.
+The data, metadata and AI models are always stored in your organization cloud account object storage.
 :::
 
 :::info How should every data+AI interaction should be done?
-Through Unity Catalog.
+Through UC.
 :::
 
 :::danger What should be avoided?
-- Accessing data using hardcoded credentials.
+- Accessing data, models or GenAI agents using hardcoded credentials.
 - Configure data access on the clusters using external libraries + environment variables.
 :::
 

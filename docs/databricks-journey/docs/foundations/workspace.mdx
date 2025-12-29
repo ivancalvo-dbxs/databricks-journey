@@ -10,41 +10,29 @@ A Databricks Workspace is the unified working environment for collaboration and 
 
 :::danger[Data and Models]
 
-A Databricks Workspace **should NOT store and govern data and models**.
+A Databricks Workspace **does NOT stores and governs the data and models**.
 
 This is a task for **Unity Catalog**.
 
 :::
 
-## What can be created in a Workspace?
+## What assets can be created in a Workspace?
 
 Check the Databricks Workspace objects on the following articles:
 
 - [Databricks Workspace Objects](https://docs.databricks.com/aws/en/workspace/workspace-assets)
 - [Access Control List for Databricks Workspace Objects](https://docs.databricks.com/aws/en/security/auth/access-control).
 
-# Users, Groups and Service Principals
-
-* Users
-* Groups
-* Service Principals 
-
 Can be added (or removed) either as Users or Admins to a Workspace.
 
 ## Lessons learned
 
 :::info What is a Workspace?
-A Workspace is where you're going to create and combine the different Databricks Products to to create a Data+AI solution.
+A Databricks workspace is a cloud-based environment where users access and organize all their Databricks assets—like notebooks, clusters, jobs, and dashboards for collaboration on data and AI tasks.
 :::
 
-:::info How many workspaces do I need?
-* Databricks suggest three workspaces (dev, staging and prod). 
-
-Highly aligned with the Software Development Lifecycle (SDLC)
-:::
-
-:::info Do I need a new workspace for each team in my organization?
-* No, just add groups either as users or admins to a specific Workspace.
+:::info Recommended number of workspaces
+* An initial setup of three workspaces (dev, staging and prod) is recommended.
 :::
 
 :::info How can I isolate my organization data?

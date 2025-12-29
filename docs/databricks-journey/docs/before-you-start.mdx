@@ -6,26 +6,23 @@ import Admonition from '@theme/Admonition';
 
 # 3. Before you start
 
-Before deploying the Cloud and Databricks assets, it is crucial to determine the specific location within your cloud tenant where these assets will be created.
+### Identify your organization cloud setup
 
-Databricks supports multi-tenant deployments designed to ensure both physical and logical isolation of users, groups, data, networking, and virtual compute environments.
-
-## Identify your cloud tenant and sub-tenants
+- [ ] A single-tenant.
+- [ ] Multiple tenants.
 
 :::note AWS
-- How many tenants do you have access to?
-    - Azure subscriptions.
-    - AWS accounts.
-    - GCP projects.
-- Do the accounts follow the SDLC dev-staging-prod isolation?
-    - If so, apply the same SDLC idea with the Databricks workspaces and cloud resources
+By cloud-tenants this article means:
+* Azure subscriptions.
+* AWS accounts.
+* GCP projects.
 :::
 
 ## Single-tenant deployment
 
 <img src={useBaseUrl('/img/single-tenant.png')} alt="description" width="800"/>
 
-### Hypothetical case for a single-tenant scenario
+### Single-tenant example
 
 - My organization uses AWS.
 - There is only one available AWS account.
@@ -33,14 +30,14 @@ Databricks supports multi-tenant deployments designed to ensure both physical an
 
 ### Databricks setup recommendation.
 
-- On the available AWS account, create the three workspaces and the required AWS resources.
+- Create the required Databricks AWS infra on the available AWS account.
 
 ## Multi-tenant deployment (best practice and recommendation)
 
 <img src={useBaseUrl('/img/multi-tenant.png')} alt="description" width="800"/>
 
 
-### Hypothetical case for a multi-tenant scenario
+### Multi-tenant example
 - My organization uses Azure.
 - There are 3 different Azure subscriptions: dev, staging and prod.
 - We want to isolate the Databricks and Azure resources as much as we can.
@@ -54,7 +51,7 @@ Databricks supports multi-tenant deployments designed to ensure both physical an
 
 :::success Identify your current cloud scenario
 
-If just one tenant is available, ask your Cloud Team if there is a plan in the short or mid term to add more.
+If just one tenant is available, ask your Infra team if there is a plan in the short or mid-term to add more.
 
 This would save you time and re-deployments in the future.
 
@@ -64,19 +61,3 @@ This would save you time and re-deployments in the future.
 :::info Multi-Tenant deployments
 This is the Databricks best practice recommendation. Highly aligned with the cloud and software best principles.
 :::
-
-
-<!---
-your comment goes here
-and here
-- For each subscription, create:
-    - 1x V-net.
-        - 2x subnets.
-        - 1x security group.
-    - 1x ADLS
-        - 1x container.
-    - 1x UC access connector.
-    - 1x Databricks Workspace.
-        - The workspace is going to use all the previous Azure assets.
--->
-

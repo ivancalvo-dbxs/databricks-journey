@@ -17,52 +17,12 @@ An extended explanation can be found in: **[Functional Workspace Organization on
     - Staging is often named as QA or testing depending on the organization context.
     - ***Treat your data and AI as you treat your code.***
 
-### Short JSON visual representation.
-
-- This is just a visual representation.
-- This is NOT how workspaces, catalogs and permissions are defined.
-
-```
-{
-  dev_workspace: {
-    name: development,
-    catalogs: [sandbox, dev]
-    permissions: [
-        de_team: [CAN_MANAGE, CAN_CREATE, CAN_READ, CAN_DELETE],
-        devops_team: [ADMIN],
-        ml_team: [CAN_READ, CAN_CREATE_MODELS],
-        it_team: [CAN_READ],
-        finance_consumers: [READ_ONLY, DASHBOARDS_ONLY]
-    ]
-  },
-
-  staging_workspace: {
-    name: staging,
-    catalogs: [sandbox, staging]
-    permissions: [
-        automation_and_service_principals: [ADMIN, CAN_MANAGE, CAN_CREATE],
-        devops_team: [ADMIN]
-        de_team: [CAN_READ, DASHBOARDS_ONLY]
-    ]
-  },
-
-  production_workspace: {
-    name: production,
-    catalogs: [production]
-    permissions: [
-        automation_and_service_principals: [ADMIN, CAN_MANAGE, CAN_CREATE],
-        devops_team: [ADMIN],
-        de_team: [CAN_READ, DASHBOARDS_ONLY],
-        data_consumers: [CAN_READ, DASHBOARDS_ONLY]
-    ]
-  },
-```    
 :::
 
 ![Workspace Deployment](/img/workspace-three.jpg)
 
 
-## Multiple business units setup
+## Three workspaces per business unit or department
 
 If three workspaces is not enought to separate your organization teams and business units do the following:
 
@@ -72,46 +32,12 @@ If three workspaces is not enought to separate your organization teams and busin
 - Add the (business unit | line of business | team name) as a prefix to the workspace names.
 - For each (business unit | line of business | team name), create a dev - staging - prod workspace.
 
-### Short JSON visual representation.
-
-- This is just a visual representation.
-- This is NOT how workspaces, catalogs and permissions are defined.
-
-```
-{
-  // Finance follows the 3 workspace SDLC approach.  
-  finance: {
-    workspaces: [finance_dev, finance_staging, finance_prod],
-    catalogs: [finance_dev, finance_staging, finance_prod],
-    permissions: [
-        de_team: [ADMINS],
-        ml_team: [CAN_READ, CAN_CREATE_MODELS],
-        it_team: [CAN_READ]
-        finance_consumers: [READ_ONLY, DASHBOARDS_ONLY]
-    ]
-  },
-  
-  // HR solutions are simpler so only a non-prod and prod is required.
-  hr: {
-    workspaces: [hr_nonprod, hr_prod],
-    catalogs: [hr_nonprod, hr_prod],
-    permissions: [
-        de_team: [ADMINS],
-        hr_consumers: [READ_ONLY, DASHBOARDS_ONLY],
-    ]
-  }
-
-  data_science: ...,
-  it_solutions: ...,
-  analytics: ...
-
-```
 :::
 
 ![Workspace Deployment](/img/workspace-lob.png)
 
 
-## Single workspace: Not recommended, hard to scale and manage.
+## A single workspace to manage everything
 
 :::danger One place for all the jobs, pipelines, dashboards and AI models in a organization.
 - Dev, Staging and Prod workloads on a single workspace is highly prone to errors.
@@ -120,10 +46,8 @@ If three workspaces is not enought to separate your organization teams and busin
 - ***Treat your data and AI as you treat your code.***
 :::
 
-
-# 
-
 ## Deploy the workspaces
 
 - [**AWS Setup Guide**](./aws.mdx)
 - [**Azure Setup Guide**](./azure.mdx)
+- [**GCP Setup Guide**](./gcp.mdx)
