@@ -5,11 +5,25 @@ sidebar_position: 1
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import Admonition from '@theme/Admonition';
 
-# Azure
+# Azure - Cloud Storage Access
 
-## How to Create a Storage Credential in Azure
+## Setup an ADLS Gen2 in Azure Databricks Video Walkthrough
+<br />
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/cAXLFgcVMn0"
+  title="Add an Acces Connector and External Location in Azure Databricks"
+  frameBorder="0"
+  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
 
-### Step 1: Create New Access Connector
+## Step-by-step guide
+
+### How to Create a Storage Credential in Azure
+
+#### Step 1: Create New Access Connector
 
 1. Navigate to the [Azure portal](https://portal.azure.com/)
 2. In the search bar, type **Access Connector for Azure Databricks**
@@ -76,7 +90,7 @@ import Admonition from '@theme/Admonition';
 <br />
 
 
-### Step 2: Configure storage credential in Databricks
+#### Step 2: Configure storage credential in Databricks
 
 10. Open your Databricks workspace and navigate to the "Catalog" section from the left sidebar
 
@@ -117,31 +131,31 @@ import Admonition from '@theme/Admonition';
 14. Click "Create" to establish the storage credential
 
 
-## External Locations
+### External Locations
 
 An external location defines a secure path to your data stored in Azure cloud object storage. It consists of three components: **storage account**, **container**, and **folder path**.
 
-### Key Concepts
+#### Key Concepts
 
 - **Multiple locations**: You can configure multiple external locations within your metastore
 - **Granular permissions**: Each external location can have different access permissions
 - **Data isolation**: External locations enable you to organize data by environment, business unit, or region
 
-### Storage Account Requirements
+#### Storage Account Requirements
 
 Your Azure storage account must meet these requirements:
 
 - **Hierarchical namespace**: Must be enabled
 - **Azure Data Lake Storage Gen2**: Required for Unity Catalog integration
 
-### Planning Your Storage Strategy
+#### Planning Your Storage Strategy
 
 You have two options for storage accounts:
 
 1. **Use existing storage account**: If you already have a compliant storage account
 2. **Create new storage account**: Recommended for new implementations or specific isolation requirements
 
-### How to Create a New Storage Account
+#### How to Create a New Storage Account
 
 1. Navigate to the [Azure portal](https://portal.azure.com/)
 2. In the search bar, type **Storage Account**
@@ -213,13 +227,13 @@ You have two options for storage accounts:
 <br />
 
 
-### Assign Permissions to Access Connector
+#### Assign Permissions to Access Connector
 
 :::info Important Security Step
 This step grants your Databricks Access Connector the necessary permissions to read and write data in your storage account.
 :::
 
-### Access Storage Account IAM Settings
+#### Access Storage Account IAM Settings
 
 1. In the Azure portal, navigate to the storage account you created in the previous section
 2. In the left sidebar, click on "Access control (IAM)" 
@@ -233,7 +247,7 @@ This step grants your Databricks Access Connector the necessary permissions to r
 </div>
 
 
-### Select Storage Blob Data Contributor Role
+#### Select Storage Blob Data Contributor Role
 
 4. In the role assignment wizard:
    - Search for "Storage Blob Data Contributor" in the role search bar
@@ -246,7 +260,7 @@ This step grants your Databricks Access Connector the necessary permissions to r
    />
 </div>
 
-### Assign Role to Access Connector
+#### Assign Role to Access Connector
 
 5. In the **Members** section:
    - Select "Managed identity" as the assignment type
@@ -263,9 +277,9 @@ This step grants your Databricks Access Connector the necessary permissions to r
 
 
 
-## How to Create External Locations in Databricks
+### How to Create External Locations in Databricks
 
-### Access External Data Configuration
+#### Access External Data Configuration
 
 1. Open your Databricks workspace
 2. Navigate to "Catalog" in the left sidebar
@@ -278,7 +292,7 @@ This step grants your Databricks Access Connector the necessary permissions to r
    />
 </div>
 
-### Create New External Location
+#### Create New External Location
 
 4. Navigate to the "External Locations" tab
 5. Click "Create external location" to begin the configuration process
@@ -291,7 +305,7 @@ This step grants your Databricks Access Connector the necessary permissions to r
    />
 </div>
 
-### Configure External Location Settings
+#### Configure External Location Settings
 
 6. Complete the external location configuration form with the following information:
    - **External Location Name**: Provide a descriptive name (e.g., "raw-data-location")
@@ -316,7 +330,7 @@ This step grants your Databricks Access Connector the necessary permissions to r
 
 <br />
 
-### Verify External Location Configuration
+#### Verify External Location Configuration
 
 8. After creation, click "Test Connection" to verify that the external location is configured correctly and accessible
 
@@ -326,46 +340,5 @@ This step grants your Databricks Access Connector the necessary permissions to r
   style={{width: '70%', height: 'auto'}}
    />
 </div>
-
-<br />
-
-
-## How to Create a New Catalog in Databricks
-
-:::tip Catalog Organization
-Catalogs are the top-level containers in Unity Catalog's three-level namespace (catalog.schema.table). Plan your catalog structure to align with your data governance strategy.
-:::
-
-
-1. In your Databricks workspace, navigate to "Catalog" in the left sidebar
-2. Click on the "Catalogs" tab to view existing catalogs
-3. Click "Create catalog" to start the catalog creation process
-
-<div style={{textAlign: 'left'}}>
-  <img src={useBaseUrl('/img/azure/catalog_creation.png')} 
-  alt="Create Catalog Button"
-  style={{width: '50%', height: 'auto'}}
-   />
-</div>
-
-
-4. Complete the catalog configuration form:
-   - **Catalog Name**: Provide a descriptive name that reflects the data domain (e.g., "sales_data", "customer_analytics")
-   - **Comment**: Add a description explaining the catalog's purpose and data scope
-   - **Storage Location**: Optionally specify a default storage location using your external location
-   - **Owner**: Set the catalog owner (defaults to current user)
-
-5. Click "Create" to establish the new catalog
-
-<div style={{textAlign: 'left'}}>
-  <img src={useBaseUrl('/img/azure/catalog_form.png')} 
-  alt="Catalog Configuration Form"
-  style={{width: '50%', height: 'auto'}}
-   />
-</div>
-
-:::note Next Steps
-After creating your catalog, you can create schemas within it and start organizing your data assets according to your governance policies.
-:::
 
 <br />
