@@ -7,13 +7,13 @@ import Admonition from '@theme/Admonition';
 
 # Azure - Cloud Storage Access
 
-## Video Walkthrough
+## Setup an ADLS Gen2 in Azure Databricks Video Walkthrough
 <br />
 <iframe
   width="560"
   height="315"
-  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-  title="YouTube video player"
+  src="https://www.youtube.com/embed/cAXLFgcVMn0"
+  title="Add an Acces Connector and External Location in Azure Databricks"
   frameBorder="0"
   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
   allowFullScreen
@@ -340,46 +340,5 @@ This step grants your Databricks Access Connector the necessary permissions to r
   style={{width: '70%', height: 'auto'}}
    />
 </div>
-
-<br />
-
-
-### How to Create a New Catalog in Databricks
-
-:::tip Catalog Organization
-Catalogs are the top-level containers in Unity Catalog's three-level namespace (catalog.schema.table). Plan your catalog structure to align with your data governance strategy.
-:::
-
-
-1. In your Databricks workspace, navigate to "Catalog" in the left sidebar
-2. Click on the "Catalogs" tab to view existing catalogs
-3. Click "Create catalog" to start the catalog creation process
-
-<div style={{textAlign: 'left'}}>
-  <img src={useBaseUrl('/img/azure/catalog_creation.png')} 
-  alt="Create Catalog Button"
-  style={{width: '50%', height: 'auto'}}
-   />
-</div>
-
-
-4. Complete the catalog configuration form:
-   - **Catalog Name**: Provide a descriptive name that reflects the data domain (e.g., "sales_data", "customer_analytics")
-   - **Comment**: Add a description explaining the catalog's purpose and data scope
-   - **Storage Location**: Optionally specify a default storage location using your external location
-   - **Owner**: Set the catalog owner (defaults to current user)
-
-5. Click "Create" to establish the new catalog
-
-<div style={{textAlign: 'left'}}>
-  <img src={useBaseUrl('/img/azure/catalog_form.png')} 
-  alt="Catalog Configuration Form"
-  style={{width: '50%', height: 'auto'}}
-   />
-</div>
-
-:::note Next Steps
-After creating your catalog, you can create schemas within it and start organizing your data assets according to your governance policies.
-:::
 
 <br />
