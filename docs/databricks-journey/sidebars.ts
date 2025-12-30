@@ -88,15 +88,8 @@ const sidebars = {
             'access-your-data-from-uc/cloud-object-storage/aws'
           ],
         },
-        {
-          type: 'category',
-          label: 'External systems and databases',
-          link: { type: 'doc', id: 'access-your-data-from-uc/external-systems/index' },
-          items: [
-            'access-your-data-from-uc/external-systems/azure',
-            'access-your-data-from-uc/external-systems/aws'
-          ],
-        }
+
+        'access-your-data-from-uc/external-systems/index'
 
       ],
     }
