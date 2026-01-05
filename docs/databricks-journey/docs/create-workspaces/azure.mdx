@@ -8,41 +8,24 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 Follow the **manual** ☑️ or **Terraform** ✅ approach to deploy the workspaces.
 
-## Terraform deployment
+## Terraform deployment 🔥
 
-:::info Development workspace
-- Deploy the **dev** workspace using Terraform.
-- Take in consideration the tenant and resource group where it's supposed to be deployed.
-  - **Example:** dev subscription, the ***dev workspace*** is going to be deployed inside the ***databricks-resources*** resource group.
-- Use the following Terraform template: [01-azure-workspace-vnet-injection](https://github.com/ivancalvo-dbxs/terraform-databricks-workspaces-2025/tree/main/azure/01-azure-workspace-vnet-injection)
+### Save time and clicks with Terraform (🔥)
+
+* [Github | Azure VNet injection Workspace Setup Guide (with VNet deployment)
+](https://github.com/databricks-solutions/technical-services-solutions/tree/main/workspace-setup/terraform-examples/azure/azure-vnet-injection)
+* Follow the **README.md**.
+* Use the **tf/terraform.tfvars.example** file as a reference!
+* Repeat for staging and production.
+
+:::info Tip #1: Workspace name for environment isolation.
+- Example #1: creating the first workspace (development).
+  - **workspace_name** can be **dev** or **development**.
+  - **workspace_name** can also include a prefix for a businesss unit.
+    - i.e **finance_dev** or **finance_development**
+
+**Note:** Apply the same idea to the **resource group** name.
 :::
-
-:::info Staging and Prod workspaces
-* Repeat the process for the **staging** and **production** workspaces.
-- Take in consideration the tenant and resource group where it's supposed to be deployed.
-  - **Example:** staging subscription, the ***staging workspace*** is going to be deployed inside the ***databricks-resources*** resource group.
-* Use the following Terraform template: [01-azure-workspace-vnet-injection](https://github.com/ivancalvo-dbxs/terraform-databricks-workspaces-2025/tree/main/azure/01-azure-workspace-vnet-injection)
-:::
-
-### Save time and clicks with Terraform 🔥
-
-To easily accomplish this task, use the following repo and Youtube Tutorial:
-
-* [Terraform Databricks Workspaces 2025](https://github.com/ivancalvo-dbxs/terraform-databricks-workspaces-2025)
-* For dev, staging and prod workspaces: [01-azure-workspace-vnet-injection](https://github.com/ivancalvo-dbxs/terraform-databricks-workspaces-2025/tree/main/azure/01-azure-workspace-vnet-injection)
-
-#### Youtube Tutorial
-
-<iframe
-  width="560"
-  height="315"
-  src="https://www.youtube.com/embed/jVMgw0_Z3h8"
-  title="YouTube video player"
-  frameBorder="0"
-  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-  allowFullScreen
-></iframe>
-
 
 ## Manual deployment
 
@@ -53,7 +36,17 @@ To easily accomplish this task, use the following repo and Youtube Tutorial:
 - Repeat for staging and production workspaces. 
 :::
 
-#### Youtube Tutorial
+#### Youtube Tutorials
+
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/tI6Pvjuo1RM"
+  title="YouTube video player"
+  frameBorder="0"
+  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
 
 <iframe
   width="560"

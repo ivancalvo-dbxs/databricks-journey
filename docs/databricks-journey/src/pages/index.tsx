@@ -74,7 +74,7 @@ const Hero = () => {
           outline={true}
           link="/docs/post-deployment/"
           size="large"
-          label={"5. Post-deployment Setup"}
+          label={"5. Post-deployment configurations"}
           className="w-full md:w-auto"
         />
       </div>
@@ -83,7 +83,7 @@ const Hero = () => {
         <Button
           variant="secondary"
           outline={true}
-          link="/docs/post-deployment/"
+          link="/docs/uc-governance-strategy/"
           size="large"
           label={"6. Governance strategy on Unity Catalog"}
           className="w-full md:w-auto"

@@ -57,18 +57,7 @@ const sidebars = {
       ],
     },
 
-    // https://repo_url.com/databricks-journey/docs/post-deployment/
-    {
-      type: 'category',
-      label: '5. Post-deployment Setup',
-      link: { type: 'doc', id: 'post-deployment/index' },
-      collapsible: true,
-      collapsed: false,
-      items: [
-        'post-deployment/account'
-      ],
-    },
-
+    'post-deployment',
     'uc-governance-strategy',
 
     // https://repo_url.com/databricks-journey/docs/access-your-data-from-uc/
