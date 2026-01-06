@@ -6,9 +6,16 @@ import Admonition from '@theme/Admonition';
 
 # Access your data from Unity Catalog
 
-:::warning UNDER CONSTRUCTION
-UNDER CONSTRUCTION
-:::
+If the plan is one of the following:
+    - Build an ETL/ELT pipeline on data that sits on your cloud data lake like S3 - ADLS - GCS.
+    - Process unstructured datasets for computer vision (images - videos) or text-related GenAI agents (PDFs):
 
-- [**Data in cloud object storage**](./cloud-object-storage/index.mdx)
-- [**Data in external systems**](./external-systems/index.mdx)
+Then, follow this section: [**Data in cloud object storage**](./cloud-object-storage/index.mdx).
+
+Else, if the plan is one of the following actions to an external system or warehouse from Databricks:
+    - Build a managed ingestion pipeline.
+    - Push-down queries.
+    
+Then, follow this section: [**Data in external systems**](./external-systems/index.mdx).
+
+![Unity Catalog and Federation](/img/uc-and-federation.png)

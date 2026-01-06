@@ -9,6 +9,10 @@ import Admonition from '@theme/Admonition';
 
 ## Create UC connection
 
+A UC connection can be created to accomplish two different tasks:
+1. Create a foregin catalog to push-down queries from Databricks.
+2. Create a managed ingestion pipeline into Unity Catalog using **Lakeflow Connect**.
+
 ### Youtube tutorial
 <br />
 <iframe
@@ -34,7 +38,6 @@ import Admonition from '@theme/Admonition';
   <img src={useBaseUrl('/img/aws/aws_external_data_buttom.png')} 
   alt="external data buttom"
   style={{width: '80%', height: 'auto'}}
-  
   />
 </div>
 <br />
@@ -44,7 +47,6 @@ import Admonition from '@theme/Admonition';
   <img src={useBaseUrl('/img/aws/addconnectionbuttom.png')} 
   alt="external data buttom"
   style={{width: '80%', height: 'auto'}}
-  
   />
 </div>
 <br />
@@ -71,7 +73,7 @@ import Admonition from '@theme/Admonition';
   Use the connection to create a UC foreign catalog to query and process external data.
 </Admonition>
 
-## Create UC Foreign catalog
+## Create an UC Foreign catalog
 
 <iframe
   width="560"
@@ -84,13 +86,9 @@ import Admonition from '@theme/Admonition';
 ></iframe>
 
 
-## Setup Lakeflow connect
+## Create an ingestion pipeline
+* More on [Databricks Lakeflow Connect Documentation](https://docs.databricks.com/aws/en/ingestion/overview).
 
-:::warning
-THIS IS DATA INGESTION, THIS NEEDS TO BE MOVED TO DATA ENGINEERING
-:::
-
-<br />
 <iframe
   width="560"
   height="315"
@@ -100,4 +98,13 @@ THIS IS DATA INGESTION, THIS NEEDS TO BE MOVED TO DATA ENGINEERING
   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
   allowFullScreen
 ></iframe>
-[Databricks Lakeflow Connect Documentation](https://docs.databricks.com/aws/en/ingestion/overview)
+
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/g1srOFsD59I"
+  title="Create a Lakeflow Connect Pipeline in AWS Databricks"
+  frameBorder="0"
+  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
