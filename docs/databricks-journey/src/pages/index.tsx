@@ -97,6 +97,15 @@ const Hero = () => {
           label={"7. Access your data from UC"}
           className="w-full md:w-auto"
         />
+
+        <Button
+          variant="secondary"
+          outline={true}
+          link="/docs/data-engineering/"
+          size="large"
+          label={"8. Data Engineering"}
+          className="w-full md:w-auto"
+        />
       </div>
     </div>
   );
