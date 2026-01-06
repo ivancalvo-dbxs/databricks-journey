@@ -81,7 +81,9 @@ const sidebars = {
         'access-your-data-from-uc/external-systems/index'
 
       ],
-    }
+    },
+
+    'data-engineering'
 
   ],
 };
