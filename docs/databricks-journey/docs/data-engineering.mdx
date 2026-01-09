@@ -34,18 +34,20 @@ In this section two Databricks Products are positioned:
 
 ### SDP in action!
 
-Install and run the following demo:
+Install and run one of the following demos:
 
-* [CDC Pipeline With Delta
-](https://www.databricks.com/resources/demos/tutorials/data-engineering/cdc-pipeline-with-delta?itm_data=demo_center).
-* By default it targets the **main** catalog, you can specify the catalog name as a parameter:
+1. [Introduction to Lakeflow Spark Declarative Pipeline - Bike](https://www.databricks.com/resources/demos/tutorials/lakehouse-platform/lakeflow-declarative-pipeline)
+2. [CDC Pipeline With Lakeflow Spark Declarative Pipeline](https://www.databricks.com/resources/demos/tutorials/lakehouse-platform/cdc-pipeline-with-delta-live-table?itm_data=demo_center).
 
+:::info When installing, specify the catalog name
 ```python
 import dbdemos
 
 catalog_name = "dev"
 dbdemos.install('cdc-pipeline', catalog = catalog_name)
 ```
+:::
+
 
 ### References for SDP development
 
