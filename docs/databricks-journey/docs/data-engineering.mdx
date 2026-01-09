@@ -44,7 +44,10 @@ Install and run one of the following demos:
 import dbdemos
 
 catalog_name = "dev"
-dbdemos.install('cdc-pipeline', catalog = catalog_name)
+demo_name = "pipeline-bike"
+#demo_name = "declarative-pipeline-cdc"
+
+dbdemos.install(demo_name, catalog = catalog_name)
 ```
 :::
 
