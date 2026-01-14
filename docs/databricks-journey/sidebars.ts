@@ -82,8 +82,9 @@ const sidebars = {
 
       ],
     },
-
-    'data-engineering'
+    'data-engineering',
+    'data-warehousing',
+    'aibi'
 
   ],
 };

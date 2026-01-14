@@ -106,8 +106,31 @@ const Hero = () => {
           label={"8. Data Engineering"}
           className="w-full md:w-auto"
         />
+
+        <Button
+          variant="secondary"
+          outline={true}
+          link="/docs/data-warehousing/"
+          size="large"
+          label={"9. Data Warehousing and AI/BI"}
+          className="w-full md:w-auto"
+        />
+      </div>
+
+      <div className="mt-6 flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4">
+        <Button
+          variant="secondary"
+          outline={true}
+          link="/docs/aibi/"
+          size="large"
+          label={"10. AI/BI"}
+          className="w-full md:w-auto"
+        />
       </div>
     </div>
+
+    
+
   );
 };
 
