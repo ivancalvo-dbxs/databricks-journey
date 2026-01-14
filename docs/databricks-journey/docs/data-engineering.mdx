@@ -6,9 +6,31 @@ import Admonition from '@theme/Admonition';
 
 # 8. Data Engineering
 
-In this section two Databricks Products are positioned:
-* Spark Declarative Pipelines (previously known as Lakeflow Pipelines or DLT).
-* Lakeflow Jobs.
+## Journey progress
+
+- [x] ~~Identify your organization cloud tenant(s).~~
+- [x] ~~Create the workspace(s).~~
+- [X] ~~Post-deployment configurations.~~
+- [X] ~~Governance Strategy on Unity Catalog.~~
+- [X] ~~Access your data from Unity Catalog.~~
+- [ ] **Create the first pipeline.**
+- [ ] Query and explore data from a DBSQL Warehouse.
+- [ ] Create the first visualization using Dashboards and Genie.
+
+## Target
+
+* Introduce two Databricks products for Data Engineering: 
+  * Spark Declarative Pipelines (formerly known as Lakeflow Pipelines or DLT)
+  * Lakeflow Jobs.
+* Build the first pipeline.
+* Build the first job.
+
+## Outcome
+
+* Create the first pipeline using Spark Declarative Pipelines.
+* Create the first orchestration job using Lakeflow Jobs.
+
+## Data Engineering on Databricks
 
 <iframe
   width="560"
@@ -16,7 +38,7 @@ In this section two Databricks Products are positioned:
   src="https://www.youtube.com/embed/n8XWOr6zIPo"
 ></iframe>
 
-## How to process and transform data?
+## Build the first data pipeline
 
 ### Spark Declarative Pipelines (SDP)
 
@@ -54,6 +76,9 @@ dbdemos.install(demo_name, catalog = catalog_name)
 
 ### References for SDP development
 
+* Use the previous demo as a reference for your first pipeline.
+* In addition, get familiar with the following resources:
+
 #### SDP Features
 
 * [Load data in pipelines](https://docs.databricks.com/aws/en/ldp/load).
@@ -82,13 +107,13 @@ dbdemos.install(demo_name, catalog = catalog_name)
 * [Sample pipeline notebook](https://github.com/ivancalvo-dbxs/medallion-pipeline-dabs/blob/main/src/pipeline_notebook.ipynb).
     * [Youtube walkthrough of the repo and project](https://www.youtube.com/watch?v=W8ucHwzwdhc).
     * Focus and use the notebook as a development reference, ignore the repo and other files.
-    * **This is a good refence on how to build a Medallion Architecture on SDP**.
+    * **Solid refence that shows how to build a Medallion Architecture on SDP**.
 
 ### My SDP is running smoothly now, what's next?
 
 * Schedule the pipeline execution (and other tasks if required) with Lakeflow Jobs.
 
-## How to setup orchestration?
+## Build the first orchestration job.
 
 ### Lakeflow Jobs
 

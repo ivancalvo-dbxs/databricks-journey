@@ -41,7 +41,7 @@ const sidebars = {
     },
 
     // https://repo_url.com/databricks-journey/docs/before-you-start/
-    'before-you-start',
+    'cloud-tenants',
 
     // https://repo_url.com/databricks-journey/docs/create-workspaces/
     {

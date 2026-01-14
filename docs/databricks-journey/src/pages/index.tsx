@@ -54,9 +54,9 @@ const Hero = () => {
         <Button
           variant="secondary"
           outline={true}
-          link="/docs/before-you-start"
+          link="/docs/cloud-tenants"
           size="large"
-          label={"3. Before you start"}
+          label={"3. Cloud tenant(s)"}
           className="w-full md:w-auto"
         />
         
