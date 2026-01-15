@@ -4,9 +4,9 @@ sidebar_position: 3
 
 # Unity Catalog
 
-Unity Catalog (UC from now on) is the the unified governance solution for data and AI assets on Databricks.
+Unity Catalog (UC) provides a centralized governance solution for managing data and AI assets across Databricks environments.
 
-More information:
+More information on:
 
 - [Databricks Unity Catalog](https://www.databricks.com/product/unity-catalog)
 - [What is Unity Catalog?](https://docs.databricks.com/aws/en/data-governance/unity-catalog/)
@@ -15,27 +15,49 @@ More information:
 
 ![Unity Catalog Access](/img/uc-top-level.jpg)
 
-## Every data, ML and GenAI interaction goes through UC
+## UC objects and the three namespace convention
 
-* When an user or service principal:
-  - Creates a table.
-  - Populates a table.
-  - Deletes a table.
-  - Query a table.
-* (Same for models, functions, views, schemas, volumes, etc...)
-  
-The grants and permissions are verified by Unity Catalog as shown in the following diagram:
+![Unity Catalog Access](/img/uc-objects.png)
+
+```sql 
+--- catalog: first namespace.
+--- schema: second namespace.
+--- table / view / volume / model: third namespace
+SELECT * from my_catalog.my_schema.my_table;
+
+--- Example: Select the gold table sales from the galaxy project on the development catalog.
+SELECT * from dev.galaxy_gold.sales;
+
+-- Set a default catalog or schema
+USE CATALOG dev;
+USE SCHEMA galaxy_gold;
+
+--- Uses the defined catalog and schema
+SELECT * FROM sales;
+
+```
+## UC Governs All Data, ML, and GenAI Interactions
+
+When a user or service principal performs any of the following actions:
+* Use an **UC object**.
+* Creates an **UC object**.
+* Populates a **UC object** (catalogs, tables, schemas).
+* Deletes an **UC object**.
+* Queries a **UC object** (query, view, table).
+* Runs an **UC object** (function, model).
+
+UC verifies the associated grants and permissions, as illustrated in the following diagram:
 
 ![Unity Catalog and Federation](/img/uc-and-federation.png)
 
 ## Lessons learned
 
-:::info What is UC?
-Unity Catalog is a centralized metadata layer designed to manage data access, security, lineage, and governance across Databricks workspaces, enabling unified data management and secure collaboration.
+:::info What is Unity Catalog?
+Is the centralized governance layer designed to manage data access, security, lineage, and governance across Databricks workspaces, enabling unified data management and secure collaboration.
 :::
 
 :::info Where is the data stored?
-The data, metadata and AI models are always stored in your organization cloud account object storage.
+The data, metadata and AI models are always stored in your organization cloud account.
 :::
 
 :::info How should every data+AI interaction should be done?
@@ -46,52 +68,3 @@ Through UC.
 - Accessing data, models or GenAI agents using hardcoded credentials.
 - Configure data access on the clusters using external libraries + environment variables.
 :::
-
-<!---
-## Next steps
-
-# Tutorial Intro
-
-Let's discover **Docusaurus in less than 5 minutes**.
-
-## Getting Started
-
-Get started by **creating a new site**.
-
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
-
-### What you'll need
-
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
-
--->
