@@ -23,7 +23,11 @@
 
   --ifm-navbar-background-color: #0B2026;
   --ifm-navbar-link-color: #F9F7F4;
+  --ifm-navbar-link-hover-bg: #FF3621;
+}
 
+.navbar {
+  --ifm-navbar-link-hover-bg: #FF3621;
 }
 
 .font-mono {
@@ -56,5 +60,5 @@ button {
 }
 
 .header-github-link:hover::before {
-  background-color: var(--ifm-navbar-link-hover-color);
+  background-color: #FF3621;
 }
