@@ -7,7 +7,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Databricks Journey',
   tagline: 'Accelerate your Databricks setup and first MVP',
-  favicon: 'img/journey.svg',
+  favicon: 'img/icon.svg',
 
   url: 'https://github.com',
   // Set the /<baseUrl>/ pathname under which your site is served

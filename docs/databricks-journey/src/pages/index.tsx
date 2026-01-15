@@ -11,7 +11,7 @@ export default function Home(): JSX.Element {
 
   return (
     <Layout
-      title={`Welcome to ${siteConfig.title}`}
+      title={`${siteConfig.title}`}
       description="Main landing page with a central logo and action buttons">
       
       <main className="flex flex-col items-center py-16 px-4">
@@ -19,9 +19,10 @@ export default function Home(): JSX.Element {
         {/* Section 0: Top Image/Logo */}
         <div className="flex justify-center mx-auto mb-6">
           <img 
-            src={useBaseUrl('/img/journey.svg')} // Change this path to your image
+            src={useBaseUrl('/img/mainpage.jpg')} // Change this path to your image
             alt="Website Logo"
-            className="w-32 h-32 md:w-48 md:h-48 object-contain" 
+            className="object-contain"
+            style={{ width: '650px', height: 'auto' }}
           />
         </div>
 
