@@ -1,150 +1,107 @@
+import React from 'react';
 import Layout from '@theme/Layout';
+import Link from '@docusaurus/Link';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+// If your image is in static/img/logo.png, you can import it like this:
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import { JSX } from 'react';
-import Button from '../components/Button';
-
-
-const Hero = () => {
-  return (
-    <div className="px-4 md:px-10 min-h-screen flex flex-col justify-center items-center w-full">
-      {/* Logo & Title Section */}
-      <div className="relative w-full flex flex-col items-center">
-        <div className="flex flex-row items-center justify-center w-full max-w-3xl relative z-10">
-          {/* Logo Left */}
-          <div className="flex-shrink-0 mr-6">
-            <img src="img/journey.svg" alt="Databricks Journey" className="w-40 md:w-48" />
-          </div>
-          {/* Title Right */}
-          <h1 className="text-4xl md:text-5xl font-bold text-left mb-0">
-            <span>Databricks Starter Journey</span>
-          </h1>
-        </div>
-      </div>
-
-      {/* Provided by 
-      <p className="text-center text-gray-600 dark:text-gray-500 mt-4 mb-2">
-        Provided by <a href="https://github.com/databricks-industry-solutions" className="underline text-blue-500 hover:text-blue-700">Databricks Industry Solutions</a>
-      </p> */}
-
-      {/* Description */}
-      <p className="text-lg text-center text-balance mb-8">
-        New on Databricks? Follow this guide to accelerate your initial setup and first MVP while following the best practices
-      </p>
-
-
-      {/* Call to Action Buttons */}
-      <div className="mt-6 flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4">
-        <Button
-          variant="secondary"
-          outline={true}
-          link="/docs/motivation"
-          size="large"
-          label={"1. Motivation"}
-          className="w-full md:w-auto"
-        />
-        
-        <Button
-          variant="secondary"
-          outline={true}
-          link="/docs/foundations"
-          size="large"
-          label={"2. Foundations"}
-          className="w-full md:w-auto"
-        />
-        
-        <Button
-          variant="secondary"
-          outline={true}
-          link="/docs/cloud-tenants"
-          size="large"
-          label={"3. Cloud tenant(s)"}
-          className="w-full md:w-auto"
-        />
-        
-        <Button
-          variant="secondary"
-          outline={true}
-          link="/docs/create-workspaces"
-          size="large"
-          label={"4. Create workspaces"}
-          className="w-full md:w-auto"
-        />
-        
-        <Button
-          variant="secondary"
-          outline={true}
-          link="/docs/post-deployment/"
-          size="large"
-          label={"5. Post-deployment configurations"}
-          className="w-full md:w-auto"
-        />
-      </div>
-
-      <div className="mt-6 flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4">
-        <Button
-          variant="secondary"
-          outline={true}
-          link="/docs/uc-governance-strategy/"
-          size="large"
-          label={"6. Governance strategy on Unity Catalog"}
-          className="w-full md:w-auto"
-        />
-        
-        <Button
-          variant="secondary"
-          outline={true}
-          link="/docs/access-your-data-from-uc/"
-          size="large"
-          label={"7. Access your data from UC"}
-          className="w-full md:w-auto"
-        />
-
-        <Button
-          variant="secondary"
-          outline={true}
-          link="/docs/data-engineering/"
-          size="large"
-          label={"8. Data Engineering"}
-          className="w-full md:w-auto"
-        />
-
-        <Button
-          variant="secondary"
-          outline={true}
-          link="/docs/data-warehousing/"
-          size="large"
-          label={"9. Data Warehousing and AI/BI"}
-          className="w-full md:w-auto"
-        />
-      </div>
-
-      <div className="mt-6 flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4">
-        <Button
-          variant="secondary"
-          outline={true}
-          link="/docs/aibi/"
-          size="large"
-          label={"10. AI/BI"}
-          className="w-full md:w-auto"
-        />
-      </div>
-    </div>
-
-    
-
-  );
-};
-
-
 
 export default function Home(): JSX.Element {
+  const { siteConfig } = useDocusaurusContext();
+
   return (
-    <Layout>
-      <main>
-        <div className='flex justify-center mx-auto'>
-          <div className='max-w-screen-lg'>
-            <Hero />
-          </div>
+    <Layout
+      title={`${siteConfig.title}`}
+      description="Main landing page with a central logo and action buttons">
+      
+      <main className="flex flex-col items-center py-16 px-4">
+        
+        {/* Section 0: Top Image/Logo */}
+        <div className="flex justify-center mx-auto mb-6">
+          <img 
+            src={useBaseUrl('/img/mainpage.jpg')} // Change this path to your image
+            alt="Website Logo"
+            className="object-contain"
+            style={{ width: '650px', height: 'auto' }}
+          />
         </div>
+
+        {/* Section 1: Title and Description */}
+        <div className="text-center mb-12">
+          <h1 className="text-5xl font-bold mb-4">
+            {siteConfig.title}
+          </h1>
+          <p className="text-2xl text-gray-600 max-w-3xl mx-auto">
+            Build your first MVP fast with this step-by-step guide.
+          </p>
+        </div>
+
+        {/* Section 2: First Row of Buttons */}
+        <div className="flex justify-center mx-auto flex-wrap gap-4 mb-6">
+          
+          <Link
+            className="button button--primary button--lg px-8 py-3"
+            to="/docs/get-started">
+            1. Get Started
+          </Link>
+          <Link
+            className="button button--secondary button--lg px-8 py-3"
+            to="/docs/foundations">
+            2. Foundations
+          </Link>
+          <Link
+            className="button button--secondary button--lg px-8 py-3"
+            to="/docs/cloud-tenants">
+            3. Cloud tenant(s)
+          </Link>
+          <Link
+            className="button button--secondary button--lg px-8 py-3"
+            to="/docs/cloud-tenants">
+            4. Create workspaces
+          </Link>
+          <Link
+            className="button button--secondary button--lg px-8 py-3"
+            to="/docs/post-deployment/">
+            5. Post-deployment configurations
+          </Link>
+        </div>
+
+        <div className="flex justify-center mx-auto flex-wrap gap-4 mb-6">
+          <Link
+            className="button button--secondary button--lg px-8 py-3"
+            to="/docs/uc-governance-strategy">
+            6. Governance strategy on Unity Catalog
+          </Link>
+          <Link
+            className="button button--secondary button--lg px-8 py-3"
+            to="/docs/access-your-data-from-uc">
+            7. Access your data from UC
+          </Link>
+        </div>
+
+        <div className="flex justify-center mx-auto flex-wrap gap-4 mb-6">
+          <Link
+            className="button button--secondary button--lg px-8 py-3"
+            to="/docs/data-engineering">
+            8. Data Engineering
+          </Link>
+          <Link
+            className="button button--secondary button--lg px-8 py-3"
+            to="/docs/data-warehouse">
+            9. Data Warehouse
+          </Link>
+        </div>
+
+        <div className="flex justify-center mx-auto flex-wrap gap-4 mb-6">
+          
+          <Link
+            className="button button--secondary button--lg px-8 py-3"
+            to="/docs/aibi">
+            10. AI/BI
+          </Link>
+        </div>
+
+
       </main>
     </Layout>
   );

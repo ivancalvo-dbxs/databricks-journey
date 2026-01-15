@@ -17,17 +17,30 @@
   --ifm-font-family-base: 'DM Sans';
   --ifm-heading-font-family: 'DM Sans';
   --ifm-font-family-monospace: 'DM Mono', monospace;
-  
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(118, 73, 73, 0.1); 
-
-  --ifm-navbar-background-color: #0B2026;
-  --ifm-navbar-link-color: #F9F7F4;
-  --ifm-navbar-link-hover-bg: #FF3621;
 }
 
 .navbar {
-  --ifm-navbar-link-hover-bg: #FF3621;
+  --ifm-navbar-background-color: #0B2026;
+  --ifm-navbar-link-color: #ffffff;
+  --ifm-navbar-link-hover-color: #FF3621;
+  --ifm-navbar-link-active-color: #FF3621;
+}
+
+.button--primary {
+  background-color: #FF3621; /* Your custom color */
+  border-color: #FF3621;
+  color: #ffffff; /* Text color */
+  transition: all 0.3s ease;
+}
+
+/* Don't forget the hover state! */
+.button--primary:hover {
+  background-color: #ff3721c9;
+  border-color: #FF3621;
+  color: #ffffff;
+  text-decoration: none; /* Docusaurus adds underlines on hover sometimes */
 }
 
 .font-mono {
@@ -40,13 +53,7 @@
   font-style: normal;
 }
 
-button {
-  @apply font-sans;
-}
 
-#search_input_react {
-  @apply font-sans;
-}
 
 .header-github-link::before {
   content: '';
