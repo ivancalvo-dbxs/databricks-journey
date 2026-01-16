@@ -59,8 +59,6 @@ const config: Config = {
           // routeBasePath: '/',
           sidebarPath: './sidebars.ts',
           sidebarCollapsed: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
         },
         blog: false,
         theme: {
@@ -96,7 +94,7 @@ const config: Config = {
     footer: {
       links: [
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Databricks Industry Solutions. Docs built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Databricks Shared Technical Services (STS). Docs built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.oneLight,
