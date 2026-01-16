@@ -15,8 +15,10 @@
 
 :root {
   --ifm-font-family-base: 'DM Sans';
+  
   --ifm-heading-font-family: 'DM Sans';
   --ifm-font-family-monospace: 'DM Mono', monospace;
+  --ifm-font-size-base: 18px;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(118, 73, 73, 0.1); 
 }

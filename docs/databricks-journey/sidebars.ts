@@ -28,7 +28,7 @@ const sidebars = {
       label: '2. Foundations',
       link: { type: 'doc', id: 'foundations/index' },
       collapsible: true,
-      collapsed: false,
+      collapsed: true,
       items: [
         'foundations/architecture',
         'foundations/workspace',
@@ -45,7 +45,7 @@ const sidebars = {
       label: '4. Create workspaces',
       link: { type: 'doc', id: 'create-workspaces/index' },
       collapsible: true,
-      collapsed: false,
+      collapsed: true,
       items: [
         'create-workspaces/azure',
         'create-workspaces/aws',
@@ -60,7 +60,7 @@ const sidebars = {
       label: '7. Access your data from Unity Catalog',
       link: { type: 'doc', id: 'access-your-data-from-uc/index' },
       collapsible: true,
-      collapsed: false,
+      collapsed: true,
       items: [
         {
           type: 'category',
