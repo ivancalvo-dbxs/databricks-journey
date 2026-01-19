@@ -1,7 +1,7 @@
 {
-  "name": "journey",
-  "version": "0.0.0",
-  "private": true,
+  "name": "starter-journey",
+  "version": "1.0.0",
+  "private": false,
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",

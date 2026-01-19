@@ -1,6 +1,4 @@
-# Starter Journey
-
-This sub-folder contains the start journey project.
+# Contribute
 
 ## How to add sections
 

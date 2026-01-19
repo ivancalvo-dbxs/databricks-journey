@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./docs/databricks-journey
+        working-directory: ./docs/starter-journey
   
     steps:
       - uses: actions/checkout@v4
@@ -47,9 +47,9 @@ jobs:
       pages: write # to deploy to Pages
       id-token: write # to verify the deployment originates from an appropriate source
 
-    # Deploy to the github-pages environment
+    # Deploy to the la-starter-journey-page environment
     environment:
-      name: github-pages
+      name: la-starter-journey-page
       url: ${{ steps.deployment.outputs.page_url }}
 
     runs-on: ubuntu-latest
