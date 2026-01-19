@@ -5,20 +5,20 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Databricks Journey',
-  tagline: 'Accelerate your Databricks setup and first MVP',
+  title: 'Starter Journey',
+  tagline: 'Accelerate your first Databricks MVP',
   favicon: 'img/icon.ico',
 
   url: 'https://github.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/databricks-journey/',
+  baseUrl: '/starter-journey/',
   trailingSlash: true,
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'ivancalvo-dbxs', // Usually your GitHub org/user name.
-  projectName: 'databricks-journey', // Usually your repo name.
+  projectName: 'starter-journey', // Usually your repo name.
   deploymentBranch: 'github-pages',
 
   onBrokenLinks: 'throw',
@@ -75,7 +75,7 @@ const config: Config = {
       respectPrefersColorScheme: false,
     },
     navbar: {
-      title: 'Databricks Journey',
+      title: 'Starter Journey',
       logo: {
         alt: 'Databricks Logo',
         src: 'img/databricks.ico',

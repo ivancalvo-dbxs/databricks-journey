@@ -1,24 +1,24 @@
 # Dependencies
-docs/databricks-journey/node_modules
+docs/starter-journey/node_modules
 
 # Production
-docs/databricks-journey/build
+docs/starter-journey/build
 
 # Generated files
-docs/databricks-journey/.docusaurus
-docs/databricks-journey/.cache-loader
+docs/starter-journey/.docusaurus
+docs/starter-journey/.cache-loader
 
 # Misc
 .DS_Store
 docs/.DS_Store
-docs/databricks-jouryney/static/.DS_Store
-docs/databricks-jouryney/static/img/.DS_Store
+docs/starter-jouryney/static/.DS_Store
+docs/starter-jouryney/static/img/.DS_Store
 
-docs/databricks-journey/.env.local
-docs/databricks-journey/.env.development.local
-docs/databricks-journey/.env.test.local
-docs/databricks-journey/.env.production.local
+docs/starter-journey/.env.local
+docs/starter-journey/.env.development.local
+docs/starter-journey/.env.test.local
+docs/starter-journey/.env.production.local
 
-docs/databricks-journey/npm-debug.log*
-docs/databricks-journey/yarn-debug.log*
-docs/databricks-journey/yarn-error.log*
+docs/starter-journey/npm-debug.log*
+docs/starter-journey/yarn-debug.log*
+docs/starter-journey/yarn-error.log*

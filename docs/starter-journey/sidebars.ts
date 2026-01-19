@@ -30,10 +30,9 @@ const sidebars = {
       collapsible: true,
       collapsed: true,
       items: [
-        'foundations/architecture',
+        'foundations/account-console',
         'foundations/workspace',
         'foundations/unity-catalog',
-        'foundations/account-console',
         'foundations/recap'
       ],
     },

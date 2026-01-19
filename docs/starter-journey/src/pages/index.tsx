@@ -12,7 +12,7 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="Main landing page with a central logo and action buttons">
+      description="New to Databricks? Launch your first MVP fast with this step-by-step guide.">
       
       <main className="flex flex-col items-center py-16 px-4">
         
@@ -56,7 +56,7 @@ export default function Home(): JSX.Element {
           </Link>
           <Link
             className="button button--secondary button--lg px-8 py-3"
-            to="/docs/cloud-tenants">
+            to="/docs/create-workspaces">
             4. Create workspaces
           </Link>
           <Link
