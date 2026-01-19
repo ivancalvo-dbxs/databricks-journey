@@ -22,9 +22,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 24.11.1
-          # cache: yarn
-          # cache-dependency-path: ./docs/databricks-journey/package-lock.json
-
+          
       - name: Install dependencies
         run: |
           yarn install
