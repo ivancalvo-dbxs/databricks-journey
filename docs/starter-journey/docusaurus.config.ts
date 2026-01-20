@@ -20,7 +20,7 @@ const config: Config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'ivancalvo-dbxs', // Usually your GitHub org/user name.
   projectName: 'starter-journey', // Usually your repo name.
-  deploymentBranch: 'la-starter-journey-page',
+  deploymentBranch: 'github-pages',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'throw',
