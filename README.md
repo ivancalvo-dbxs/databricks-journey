@@ -11,3 +11,5 @@ This sub-folder contains the start journey project.
 ## How to run the project locally
 
 * `/cd` to the folder.
+`yarn install` (only the first time).
+`yarn start`
