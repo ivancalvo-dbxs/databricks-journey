@@ -83,7 +83,7 @@ const config: Config = {
       },
       items: [
         {
-          href: 'https://github.com/databricks-solutions/technical-services-solutions',
+          href: 'https://github.com/ivancalvo-dbxs/databricks-journey',
           position: 'right',
 
           className: 'header-github-link',

@@ -47,7 +47,7 @@ jobs:
 
     # Deploy to the la-starter-journey-page environment
     environment:
-      name: la-starter-journey-page
+      name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
     runs-on: ubuntu-latest
