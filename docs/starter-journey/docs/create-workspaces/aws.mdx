@@ -8,18 +8,31 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 Follow the **manual** ☑️ or **Terraform** ✅ approach to deploy the workspaces.
 
-## Create a Databricks Account
+## Databricks Account
 
-If you don't have a Databricks account yet, follow this video to create a new one:
+If you don't have a Databricks account yet, do the steps listed on the official documentation:
 
-<iframe
-  width="560"
-  height="315"
-  src="https://www.youtube.com/embed/psSblIqH93E"
-></iframe>
+:::note Create a Databricks Account
+* [**(Databricks documentation) Create your Databricks account**](https://docs.databricks.com/aws/en/getting-started/cloud-setup#create-your-databricks-account)
 
-<br />
-<br />
+:::info Outputs
+* If you follow the process right, you'll end with a serverless workspace named ***workspace***.
+* This guide recommends a [**classic workspace**](https://docs.databricks.com/aws/en/admin/workspace/#when-to-choose-classic-workspaces) instead.
+:::
+
+## Manual workspace creation ☑️
+
+:::note Workspace creation
+
+* Follow the instructions to below to provide a new workspace.
+* **Create the development workspace first**.
+  * Repeat for staging and production.
+
+:::success Guide
+* <a target="_blank" href={useBaseUrl('/pdfs/AWS-Automated-Configuration-Classic-Workspace-Deployment.pdf')}>**View PDF - AWS Automated Configuration Classic Workspace Deployment**</a>
+:::
+
+
 
 ## Terraform deployment 🔥
 
@@ -28,13 +41,13 @@ If you don't have a Databricks account yet, follow this video to create a new on
 * [Github | Databricks on AWS with Customer-Managed VPC (BYOVPC)](https://github.com/databricks-solutions/technical-services-solutions/tree/main/workspace-setup/terraform-examples/aws/aws-byovpc)
 * Follow the **README.md**.
 * Use the **tf/terraform.tfvars.example** file as a reference!
-* Repeat for staging and production.
+  * Repeat for staging and production.
 
 :::info Tip #1: Environment isolation.
 - Use the prefix to apply the environment isolation.
   - Example #1: creating the first workspace (development).
     - prefix can be **dev** or **development**.
-    - prefix can also have the businesss unit.
+    - prefix can also have the businesss unit name.
       - i.e **finance_dev** or **finance_dev**
 :::
 
@@ -48,26 +61,18 @@ If you don't have a Databricks account yet, follow this video to create a new on
 - Option #2 if there is a metastore in the region  already.
 :::
 
+:::info Tip #4: Terraform deployment example
+
+Different template, same execution.
+
 <iframe
   width="560"
   height="315"
   src="https://www.youtube.com/embed/t5vyL1RKXUE"
   title="YouTube video player"
 ></iframe>
-
-
-## Manual deployment 
-
-:::info Tips
-- Follow this video to deploy the first workspace, start with the **development workspace**.
-- Take in consideration the AWS account where it's supposed to be deployed.
-  - i.e dev workspace on the dev AWS account.
-- Repeat for **staging** and **production** workspaces. 
 :::
 
-<iframe
-  width="560"
-  height="315"
-  src="https://www.youtube.com/embed/7n9WrkJhc7c"
-></iframe>
+
+
 
