@@ -12,7 +12,7 @@ const config: Config = {
   url: 'https://github.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/databricks-journey/',
+  baseUrl: '/starter-journey/',
   // https://github.com/databricks-solutions/technical-services-solutions/starter-journey
   trailingSlash: true,
 
